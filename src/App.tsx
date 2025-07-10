@@ -296,7 +296,7 @@ function App() {
                 <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 rounded-full animate-spin-slow opacity-75"></div>
                 <div className="w-36 h-36 bg-black rounded-full flex items-center justify-center relative z-10 mt-2 ml-2 border-4 border-cyan-400 shadow-lg shadow-cyan-400/50 overflow-hidden">
                   <img 
-                    src="/IMG_20250608_092924_422.jpg" 
+                    src="/portfolio/IMG_20250608_092924_422.jpg" 
                     alt="Meet Nirav Zaveri" 
                     className="w-full h-full object-cover rounded-full"
                   />
@@ -345,7 +345,7 @@ function App() {
               <button 
                 onClick={() => {
                   const link = document.createElement('a');
-                  link.href = '/Meet_Nirav_Zaveri_Data_Engineer_Resume.pdf';
+                  link.href = '/portfolio/Meet_Nirav_Zaveri_Data_Engineer_Resume.pdf';
                   link.download = 'Meet_Nirav_Zaveri_Data_Engineer_Resume.pdf';
                   document.body.appendChild(link);
                   link.click();
