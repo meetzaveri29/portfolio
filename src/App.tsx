@@ -45,21 +45,21 @@ function App() {
       level: 95, 
       icon: Code, 
       color: 'from-cyan-400 to-blue-600', 
-      tools: ['Python', 'SQL', 'R', 'SAS', 'NoSQL'] 
+      tools: ['SQL', 'Python', 'PySpark', 'NoSQL', 'R', 'SAS'] 
     },
     { 
       name: 'Data Engineering', 
       level: 92, 
       icon: Database, 
       color: 'from-purple-400 to-pink-600', 
-      tools: ['ETL/ELT', 'Apache Spark', 'Airflow', 'DataStage', 'Apache NiFi'] 
+      tools: ['ETL/ELT', 'Apache Spark', 'Airflow', 'Informatica', 'Apache NiFi'] 
     },
     { 
       name: 'Cloud & Big Data', 
       level: 90, 
       icon: Cpu, 
       color: 'from-blue-400 to-cyan-600', 
-      tools: ['GCP BigQuery', 'AWS S3/Glue/Redshift', 'Hadoop HDFS', 'Dataflow'] 
+      tools: ['Azure Data Factory', 'GCP BigQuery', 'Hadoop HDFS', 'Synapse', 'ADLS'] 
     },
     { 
       name: 'Data Analytics', 
@@ -85,6 +85,15 @@ function App() {
   ];
 
   const projects = [
+    {
+      title: 'Modern Data Platform',
+      description: 'Built an ELT solution on Azure to unify sales and customer data, automating 3+ years of data from 10+ sources via metadata-driven Azure Data Factory pipeline with Medallion Architecture.',
+      tech: ['Azure Data Factory', 'ADLS', 'RESTful API', 'Databricks', 'Synapse', 'Power BI'],
+      image: 'https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      impact: '85% reduction in data prep time, reporting latency from hours to minutes',
+      date: 'August 2025',
+      type: 'Cloud Data Platform'
+    },
     {
       title: 'Healthcare Data Warehouse',
       description: 'Designed a comprehensive healthcare data warehouse using PostgreSQL, integrating survey, workforce, and expenditure data through Python pipelines orchestrated with Apache Airflow.',
@@ -162,7 +171,7 @@ function App() {
     },
     {
       year: '2022-2023',
-      title: 'Data Engineer Analyst',
+      title: 'Data Engineer',
       subtitle: 'Accenture',
       organization: 'Mumbai, India',
       type: 'experience',
@@ -175,7 +184,7 @@ function App() {
     },
     {
       year: '2021-2022',
-      title: 'Data Engineer Associate',
+      title: 'Associate Data Engineer',
       subtitle: 'Accenture',
       organization: 'Mumbai, India',
       type: 'experience',
@@ -345,8 +354,8 @@ function App() {
               <button 
                 onClick={() => {
                   const link = document.createElement('a');
-                  link.href = '/portfolio/Meet_Nirav_Zaveri_Data_Engineer_Resume.pdf';
-                  link.download = 'Meet_Nirav_Zaveri_Data_Engineer_Resume.pdf';
+                  link.href = '/portfolio/Meet_Zaveri_Data_Engineer_Resume.pdf';
+                  link.download = 'Meet_Zaveri_Data_Engineer_Resume.pdf';
                   document.body.appendChild(link);
                   link.click();
                   document.body.removeChild(link);
