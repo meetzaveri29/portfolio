@@ -40,168 +40,181 @@ function App() {
   };
 
   const skills = [
-    { 
-      name: 'Programming', 
-      level: 95, 
-      icon: Code, 
-      color: 'from-cyan-400 to-blue-600', 
-      tools: ['SQL', 'Python', 'PySpark', 'NoSQL', 'R', 'SAS'] 
+    {
+      name: 'Programming & Automation',
+      level: 96,
+      icon: Code,
+      color: 'from-cyan-400 to-blue-600',
+      tools: ['Python', 'PySpark', 'SQL', 'Shell', 'FastAPI']
     },
-    { 
-      name: 'Data Engineering', 
-      level: 92, 
-      icon: Database, 
-      color: 'from-purple-400 to-pink-600', 
-      tools: ['ETL/ELT', 'Apache Spark', 'Airflow', 'Informatica', 'Apache NiFi'] 
+    {
+      name: 'Cloud Data Platforms',
+      level: 94,
+      icon: Cpu,
+      color: 'from-blue-400 to-cyan-600',
+      tools: ['Azure Data Factory', 'Synapse', 'ADLS Gen2', 'GCP BigQuery', 'Dataflow', 'Pub/Sub']
     },
-    { 
-      name: 'Cloud & Big Data', 
-      level: 90, 
-      icon: Cpu, 
-      color: 'from-blue-400 to-cyan-600', 
-      tools: ['Azure Data Factory', 'GCP BigQuery', 'Hadoop HDFS', 'Synapse', 'ADLS'] 
+    {
+      name: 'Modern Data Engineering',
+      level: 92,
+      icon: Database,
+      color: 'from-purple-400 to-pink-600',
+      tools: ['dbt', 'Databricks', 'Apache Spark', 'Airflow', 'Hadoop', 'Kafka']
     },
-    { 
-      name: 'Data Analytics', 
-      level: 88, 
-      icon: BarChart3, 
-      color: 'from-pink-400 to-purple-600', 
-      tools: ['Tableau', 'Power BI', 'Matplotlib', 'Seaborn', 'ggplot2'] 
+    {
+      name: 'Data Modeling & Quality',
+      level: 90,
+      icon: BarChart3,
+      color: 'from-pink-400 to-purple-600',
+      tools: ['Star Schema', 'Snowflake Schema', 'Data Quality', 'Performance Tuning', 'Data Lakehouse']
     },
-    { 
-      name: 'Machine Learning', 
-      level: 85, 
-      icon: Brain, 
-      color: 'from-green-400 to-blue-600', 
-      tools: ['Applied ML', 'Predictive Models', 'Data Mining', 'Statistical Analysis'] 
+    {
+      name: 'DevOps & CI/CD',
+      level: 89,
+      icon: Zap,
+      color: 'from-yellow-400 to-orange-600',
+      tools: ['GitHub Actions', 'Jenkins', 'Docker', 'Bitbucket', 'Git']
     },
-    { 
-      name: 'Data Management', 
-      level: 89, 
-      icon: Zap, 
-      color: 'from-yellow-400 to-orange-600', 
-      tools: ['Data Governance', 'Data Quality', 'JIRA', 'Agile & Scrum'] 
+    {
+      name: 'Analytics & Reporting',
+      level: 88,
+      icon: Brain,
+      color: 'from-green-400 to-blue-600',
+      tools: ['Tableau', 'Power BI', 'Snowflake', 'SQL Server', 'PostgreSQL']
     },
   ];
 
   const projects = [
     {
       title: 'Modern Data Platform',
-      description: 'Built an ELT solution on Azure to unify sales and customer data, automating 3+ years of data from 10+ sources via metadata-driven Azure Data Factory pipeline with Medallion Architecture.',
-      tech: ['Azure Data Factory', 'ADLS', 'RESTful API', 'Databricks', 'Synapse', 'Power BI'],
+      description: 'Built metadata-driven ELT pipelines on Azure and Databricks, transforming raw lending data into analytics-ready Snowflake layers and reducing query time from 10 minutes to 30 seconds.',
+      tech: ['dbt', 'Snowflake', 'Azure Data Factory', 'Databricks', 'ADLS Gen2', 'Power BI'],
       image: 'https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-      impact: '85% reduction in data prep time, reporting latency from hours to minutes',
-      date: 'August 2025',
+      impact: '95% faster query performance and analytics-ready lending mart',
+      date: '2026',
       type: 'Cloud Data Platform'
     },
     {
-      title: 'Healthcare Data Warehouse',
-      description: 'Designed a comprehensive healthcare data warehouse using PostgreSQL, integrating survey, workforce, and expenditure data through Python pipelines orchestrated with Apache Airflow.',
-      tech: ['PostgreSQL', 'Python', 'Apache Airflow', 'Tableau', 'NumPy', 'Pandas'],
-      image: 'https://images.pexels.com/photos/4386466/pexels-photo-4386466.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-      impact: 'Enhanced data-driven decision making for healthcare workforce planning',
-      date: 'October 2024',
-      type: 'Data Warehouse'
-    },
-    {
-      title: 'Big Data Fleet Analysis Pipeline',
-      description: 'Engineered a robust ETL pipeline using Hadoop and HDFS, optimizing data ingestion, transformation, and storage for 5GB truck fleet dataset.',
-      tech: ['Hadoop', 'HDFS', 'Hive', 'Impala', 'SAS', 'ETL'],
+      title: 'Fleet Analytics System',
+      description: 'Designed Spark + Hadoop pipelines for daily telemetry ingestion and deployed SAS regression models to predict mileage incidents, reducing fleet violations by 15%.',
+      tech: ['Hadoop', 'Hive', 'Impala', 'SAS', 'PySpark', 'Big Data'],
       image: 'https://images.pexels.com/photos/1427541/pexels-photo-1427541.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-      impact: '40% reduction in query response time, 15% drop in traffic violations',
-      date: 'April 2024',
+      impact: '15% fewer incidents through predictive analytics',
+      date: '2025',
       type: 'Big Data Analytics'
     },
     {
-      title: 'Revenue Management ETL System',
-      description: 'Architected end-to-end ETL pipelines for 3+ revenue management applications handling orders and scans data using SQL and UNIX Shell scripts.',
-      tech: ['SQL', 'UNIX Shell', 'Teradata', 'DataStage', 'Git', 'Jenkins'],
+      title: 'Real-Time Delivery API',
+      description: 'Built FastAPI microservices serving real-time BI and ML feature store datasets with sub-100ms response times and 99.5% data accuracy.',
+      tech: ['FastAPI', 'Python', 'Snowflake', 'GitHub Actions', 'Docker', 'REST'],
+      image: 'https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      impact: 'Improved downstream analytics accessibility by 50%',
+      date: '2026',
+      type: 'Real-Time Data'
+    },
+    {
+      title: 'Revenue Systems ETL',
+      description: 'Engineered distributed ETL for high-throughput revenue systems using Airflow, PySpark, and Informatica, while automating batch monitoring and anomaly detection for 100+ workflows.',
+      tech: ['Airflow', 'PySpark', 'Informatica', 'Teradata', 'Jenkins', 'Python'],
       image: 'https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-      impact: '20% improvement in reporting efficiency, eliminated $80K/month revenue leakage',
-      date: 'Accenture Project',
-      type: 'ETL Pipeline'
+      impact: 'Prevented $80K/month leakage and reduced incident response time by 85%',
+      date: '2023',
+      type: 'ETL & Monitoring'
     }
   ];
 
   const achievements = [
     {
-      title: 'Revenue Optimization',
-      description: 'Eliminated $80,000/month revenue leakage through CI/CD pipeline implementation',
+      title: 'Revenue Leakage Prevention',
+      description: 'Stopped $80K/month revenue loss by modernizing ETL workflows and enforcing deployment controls.',
       icon: TrendingUp,
       color: 'from-green-400 to-emerald-600',
       metric: '$80K/month saved'
     },
     {
-      title: 'Performance Enhancement',
-      description: 'Reduced dashboard refresh times from 2 hours to 10 minutes (92% improvement)',
+      title: 'Execution Speed',
+      description: 'Cut large-scale workflow execution time by 75% through partition tuning and optimized Spark joins.',
       icon: Zap,
       color: 'from-yellow-400 to-orange-600',
-      metric: '92% faster'
+      metric: '75% faster'
     },
     {
-      title: 'Data Quality Excellence',
-      description: 'Achieved 98% reduction in data ingestion errors across 20+ SQL batches',
-      icon: Target,
-      color: 'from-blue-400 to-cyan-600',
-      metric: '98% error reduction'
-    },
-    {
-      title: 'Cloud Migration Success',
-      description: 'Led Teradata to BigQuery migration with 97% success rate',
+      title: 'Cost Optimization',
+      description: 'Reduced compute and storage costs by 30% with workload tuning and cloud architecture improvements.',
       icon: Star,
+      color: 'from-blue-400 to-cyan-600',
+      metric: '30% cost savings'
+    },
+    {
+      title: 'Data Accuracy',
+      description: 'Delivered 99.5% data accuracy across multi-source integrations with automated quality validations.',
+      icon: Target,
       color: 'from-purple-400 to-pink-600',
-      metric: '97% success rate'
+      metric: '99.5% accuracy'
     }
   ];
 
   const timeline = [
     {
-      year: '2023-2025',
-      title: 'Master of Science',
-      subtitle: 'IT Management',
-      organization: 'University of Texas at Dallas',
-      type: 'education',
-      description: 'Advanced studies in data warehousing, big data, and machine learning',
-      gpa: '3.97/4.0',
+      year: '2026 - Present',
+      title: 'Data Engineer',
+      subtitle: 'Bank OZK',
+      organization: 'Dallas, TX',
+      type: 'experience',
+      description: 'Developing dbt-driven Snowflake lending data mart migrations and automated CI/CD for analytics-ready cloud delivery.',
       achievements: [
-        'Business Analytics Certificate',
-        'Jungchan Hsieh Fellowship',
-        'Healthcare & Fleet Analytics Projects'
+        'Built 20+ dbt models for lending data migration',
+        'Reduced average query time from 10 minutes to 30 seconds',
+        'Automated GitHub Actions deployment pipelines'
       ]
     },
     {
-      year: '2022-2023',
+      year: 'September 2025 - January 2026',
+      title: 'Data Engineer',
+      subtitle: 'ITMiracle',
+      organization: 'Dallas, TX',
+      type: 'experience',
+      description: 'Architected Azure Databricks and PySpark pipelines for 5M+ daily records and built FastAPI microservices for real-time BI delivery.',
+      achievements: [
+        'Cut data ingestion time by 65%',
+        'Delivered sub-100ms APIs for BI dashboards',
+        'Achieved 99.5% cross-source data accuracy'
+      ]
+    },
+    {
+      year: 'January 2021 - July 2023',
       title: 'Data Engineer',
       subtitle: 'Accenture',
       organization: 'Mumbai, India',
       type: 'experience',
-      description: 'Led ETL pipeline development and cloud migration initiatives for revenue management systems',
+      description: 'Engineered distributed ETL pipelines using Airflow, PySpark, and Informatica while leading migrations and automation for revenue systems.',
       achievements: [
-        'Eliminated $80K/month revenue leakage',
-        '20% improvement in reporting efficiency',
-        '97% success rate in cloud migration POC'
+        'Prevented $80K/month revenue leakage',
+        'Reduced compute costs by 30%',
+        'Cut execution time by 75%'
       ]
     },
     {
-      year: '2021-2022',
-      title: 'Associate Data Engineer',
-      subtitle: 'Accenture',
-      organization: 'Mumbai, India',
-      type: 'experience',
-      description: 'Built data quality frameworks, monitored 100+ production jobs processing 500M+ records daily',
+      year: 'August 2023 - May 2025',
+      title: 'Master of Science',
+      subtitle: 'Information Technology and Management',
+      organization: 'The University of Texas at Dallas',
+      type: 'education',
+      description: 'Business Intelligence and Analytics track focused on cloud data engineering, data warehousing, and analytics architecture.',
+      gpa: '3.95/4.0',
       achievements: [
-        '98% reduction in data ingestion errors',
-        '99.9% uptime maintenance',
-        '40% query optimization improvement'
+        'Business Intelligence and Analytics Track',
+        'Advanced cloud data engineering coursework',
+        'Capstone projects in analytics-ready pipelines'
       ]
     },
     {
-      year: '2016-2020',
+      year: '2016 - 2020',
       title: 'Bachelor of Technology',
       subtitle: 'Electronics Engineering',
       organization: 'University of Mumbai, India',
       type: 'education',
-      description: 'Built foundation in engineering principles and analytical thinking',
+      description: 'Built strong engineering fundamentals in systems analysis, optimization, and problem-solving.',
       gpa: '3.33/4.0'
     }
   ];
@@ -317,10 +330,10 @@ function App() {
                 MEET NIRAV ZAVERI
               </h1>
               <div className="text-2xl md:text-3xl font-semibold text-cyan-300 mb-2">
-                Data Engineer & Analyst
+                Data Engineer
               </div>
               <div className="text-lg text-purple-300 font-mono mb-4">
-                🚀 Transforming data into actionable insights
+                🚀 Building scalable cloud and on-prem data platforms
               </div>
               <div className="flex items-center justify-center gap-6 text-sm text-blue-200 mb-4">
                 <div className="flex items-center gap-2">
@@ -338,9 +351,8 @@ function App() {
               </div>
             </div>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Master's student at UT Dallas (3.97 GPA) with 2.5+ years of experience at Accenture building robust data pipelines, 
-              optimizing ETL workflows, and driving data-driven decisions. 
-              <span className="text-cyan-400 font-semibold"> Specialized in cloud migrations and performance optimization!</span>
+              Data Engineer building scalable data platforms across cloud and on-prem environments, with proven ability to reduce costs by 30%, cut execution time by 75%, and prevent $80K/month revenue leakage.
+              <span className="text-cyan-400 font-semibold"> Expert in distributed ETL/ELT pipelines on Azure and GCP using Python, PySpark, SQL, Airflow, and Databricks.</span>
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
               <button
@@ -354,8 +366,8 @@ function App() {
               <button 
                 onClick={() => {
                   const link = document.createElement('a');
-                  link.href = '/portfolio/Meet_Zaveri_Data_Engineer_Resume.pdf';
-                  link.download = 'Meet_Zaveri_Data_Engineer_Resume.pdf';
+                  link.href = '/portfolio/Meet_Zaveri_Data_Engineer.pdf';
+                  link.download = 'Meet_Zaveri_Data_Engineer.pdf';
                   document.body.appendChild(link);
                   link.click();
                   document.body.removeChild(link);
@@ -405,7 +417,7 @@ function App() {
               About Me
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              A passionate data engineer and analyst who believes in the power of data to transform businesses!
+              Data Engineer building scalable cloud and on-prem data platforms, with expertise in ETL/ELT architecture, data quality frameworks, CI/CD automation, and modern analytics delivery.
             </p>
           </div>
           <div className="flex justify-center">
@@ -435,10 +447,10 @@ function App() {
                   <h4 className="text-xl md:text-2xl lg:text-3xl font-bold text-cyan-300 mb-4 md:mb-6">Engineering Data Solutions</h4>
                   <div className="space-y-4 md:space-y-6 text-gray-300 text-left max-w-none">
                     <p className="text-base md:text-lg leading-relaxed">
-                      <span className="text-cyan-400 font-semibold">Master's in IT Management at UT Dallas</span> with expertise in Python, SQL, and cloud technologies. My experience at Accenture involved building robust data pipelines that prevented millions in revenue loss.
+                      <span className="text-cyan-400 font-semibold">Master of Science in Information Technology and Management</span> from UT Dallas, specializing in Business Intelligence and Analytics. I design scalable ETL/ELT architectures, automated data quality frameworks, and CI/CD deployments for cloud platforms.
                     </p>
                     <p className="text-base md:text-lg leading-relaxed">
-                      I specialize in <span className="text-purple-400 font-semibold">ETL/ELT pipeline optimization</span>, cloud migrations (Teradata to BigQuery), and performance tuning. Whether it's reducing dashboard refresh times by 92% or eliminating $80K/month revenue leakage, I approach every challenge with precision and expertise.
+                      I specialize in <span className="text-purple-400 font-semibold">cloud data warehousing, workflow orchestration, and performance optimization</span>. My work spans Azure, GCP, Snowflake, Databricks, and real-time data delivery to BI and ML systems.
                     </p>
                     
                     {/* Education & Certifications */}
@@ -449,7 +461,7 @@ function App() {
                           <div className="text-base md:text-lg font-bold text-cyan-400">Education</div>
                         </div>
                         <div className="text-sm md:text-base text-gray-300">
-                          <div>MS IT Management - UT Dallas (3.97 GPA)</div>
+                          <div>MS IT Management - UT Dallas (3.95 GPA)</div>
                           <div>BTech Electronics - University of Mumbai (3.33 GPA)</div>
                         </div>
                       </div>
@@ -792,7 +804,7 @@ function App() {
             <div className="flex items-center justify-center gap-3 mb-4">
               <Database className="text-cyan-400" size={24} />
               <p className="text-gray-400 font-mono">
-                © 2024 Meet Nirav Zaveri - Data Engineer & Analyst. Transforming data into insights! 🚀
+                © 2026 Meet Nirav Zaveri - Data Engineer. Transforming data into insights! 🚀
               </p>
             </div>
             <div className="flex justify-center space-x-6">

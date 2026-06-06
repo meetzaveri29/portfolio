@@ -114,7 +114,7 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onLoadingComplete }) => {
           {glitchText}
         </h1>
         <p className="text-cyan-300 mb-8 text-lg font-light tracking-wide">
-          Data Engineer & Analyst
+          Data Engineer
         </p>
 
         {/* Holographic progress bar */}
