@@ -318,7 +318,7 @@ function App() {
                 <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 rounded-full animate-spin-slow opacity-75"></div>
                 <div className="w-36 h-36 bg-black rounded-full flex items-center justify-center relative z-10 mt-2 ml-2 border-4 border-cyan-400 shadow-lg shadow-cyan-400/50 overflow-hidden">
                   <img 
-                    src="/portfolio/IMG_20250608_092924_422.jpg" 
+                    src={`${import.meta.env.BASE_URL}IMG_20250608_092924_422.jpg`} 
                     alt="Meet Nirav Zaveri" 
                     className="w-full h-full object-cover rounded-full"
                   />
@@ -366,7 +366,7 @@ function App() {
               <button 
                 onClick={() => {
                   const link = document.createElement('a');
-                  link.href = '/portfolio/Meet_Zaveri_Data_Engineer.pdf';
+                  link.href = `${import.meta.env.BASE_URL}Meet_Zaveri_Data_Engineer.pdf`;
                   link.download = 'Meet_Zaveri_Data_Engineer.pdf';
                   document.body.appendChild(link);
                   link.click();
@@ -778,7 +778,8 @@ function App() {
                 type="submit"
                 onClick={(e) => {
                   e.preventDefault();
-                  const form = e.target.closest('form') as HTMLFormElement;
+                  const form = e.currentTarget.form;
+                  if (!form) return;
                   const formData = new FormData(form);
                   const name = formData.get('name');
                   const email = formData.get('email');
