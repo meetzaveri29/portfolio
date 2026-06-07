@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Menu, X, Github, Linkedin, Mail, ExternalLink, Download, Code, Database, BarChart3, ArrowRight, ChevronDown, Zap, Cpu, Brain, GraduationCap, Award, MapPin, Phone, Calendar, Building, Star, Target, TrendingUp, Plus } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { Menu, X, Github, Linkedin, Mail, Download, Code, Database, BarChart3, ArrowRight, ChevronDown, Zap, Cpu, Brain, GraduationCap, Award, MapPin, Phone, Building, Star, Target, TrendingUp, Plus } from 'lucide-react';
 import LoadingScreen from './components/LoadingScreen';
 
 function App() {
